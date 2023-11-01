@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.fir.declarations.builder.buildTypeParameter
+
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
@@ -14,8 +16,9 @@ kotlin {
                 jvmTarget = "1.8"
             }
         }
+        publishLibraryVariants("release")
     }
-    
+
     listOf(
         iosX64(),
         iosArm64(),
